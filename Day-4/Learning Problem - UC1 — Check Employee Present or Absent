@@ -1,0 +1,16 @@
+import java.util.Random;
+
+public class UC1_EmployeeAttendance {
+    public static void main(String[] args) {
+
+        int IS_PRESENT = 1;
+
+        Random rand = new Random();
+        int check = rand.nextInt(2);
+
+        if (check == IS_PRESENT)
+            System.out.println("Employee is Present");
+        else
+            System.out.println("Employee is Absent");
+    }
+}
