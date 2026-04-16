@@ -1,0 +1,44 @@
+1) Write a Program for the sum of n natural numbers eg. Input N=5 output 1+2+3+4+5 :
+
+
+import java.util.Scanner;
+
+public class SumWhile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int i = 1, sum = 0;
+
+        while (i <= n) {
+            sum += i;
+            System.out.print(i + (i < n ? "+" : ""));
+            i++;
+        }
+
+        System.out.println(" = " + sum);
+    }
+}
+
+
+2) Write a Program to reverse the integer number eg. Input n=231 reverse is 132 :
+
+
+import java.util.Scanner;
+
+public class ReverseWhile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int rev = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n /= 10;
+        }
+
+        System.out.println("Reverse: " + rev);
+    }
+}
