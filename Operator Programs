@@ -1,0 +1,82 @@
+1)  Enter two numbers and do the following arithmetic Operations find max and min. :
+i) a+b*c ii) c+a/b :
+ii) a%b+c iV) a*b+c :
+
+import java.util.Scanner;
+
+public class ArithmeticOps {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+
+        System.out.println(a + b * c);
+        System.out.println(c + a / b);
+        System.out.println(a % b + c);
+        System.out.println(a * b + c);
+    }
+}
+
+
+2)  Write a program SpringSeason.java that takes two int values m and d from the command line and prints true if day d of month m is between March 20 (m = 3, d=20) and June 20 (m = 6, d = 20), false otherwise. :
+
+import java.util.Scanner;
+
+public class SpringSeason {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int d = sc.nextInt();
+
+        boolean isSpring = (m == 3 && d >= 20) ||
+                           (m > 3 && m < 6) ||
+                           (m == 6 && d <= 20);
+
+        System.out.println(isSpring);
+    }
+}
+
+
+3. Write a program Quadratic.java to find the roots of the equation a*x*x + b*x + c. :
+Since the equation is x*x, hence there are 2 roots. The 2 roots of the equation can be found using a formula delta = b*b - 4*a*c
+Root 1 of x = (-b + sqrt(delta))/(2*a)
+Root 2 of x = (-b - sqrt(delta))/(2*a)
+Take a, b, and c as input values to find the roots of x. :
+
+import java.util.Scanner;
+
+public class Quadratic {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+
+        double delta = b*b - 4*a*c;
+
+        if (delta >= 0) {
+            double r1 = (-b + Math.sqrt(delta)) / (2*a);
+            double r2 = (-b - Math.sqrt(delta)) / (2*a);
+
+            System.out.println("Roots: " + r1 + ", " + r2);
+        } else {
+            System.out.println("No real roots");
+        }
+    }
+}
+
+
+4. Write a program Distance.java that takes two integer command-line arguments x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0). The formulae to calculate distance = sqrt(x*x + y*y). Use Math.power function :
+
+import java.util.Scanner;
+
+public class Distance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+
+        double dist = Math.sqrt(x*x + y*y);
+
+        System.out.println("Distance: " + dist);
+    }
+}
