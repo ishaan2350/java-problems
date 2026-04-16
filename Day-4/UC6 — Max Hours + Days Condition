@@ -1,0 +1,35 @@
+import java.util.Random;
+
+public class UC6_MaxCondition {
+    public static void main(String[] args) {
+
+        int WAGE_PER_HOUR = 20;
+        int FULL_TIME = 8;
+        int PART_TIME = 4;
+        int MAX_DAYS = 20;
+        int MAX_HOURS = 100;
+
+        int totalHours = 0;
+        int totalDays = 0;
+
+        Random rand = new Random();
+
+        while (totalHours <= MAX_HOURS && totalDays < MAX_DAYS) {
+
+            totalDays++;
+
+            int check = rand.nextInt(3);
+            int hours = 0;
+
+            if (check == 1) hours = FULL_TIME;
+            else if (check == 2) hours = PART_TIME;
+
+            totalHours += hours;
+        }
+
+        int salary = totalHours * WAGE_PER_HOUR;
+
+        System.out.println("Total Hours: " + totalHours);
+        System.out.println("Total Salary: " + salary);
+    }
+}
