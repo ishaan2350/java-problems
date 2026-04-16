@@ -1,0 +1,16 @@
+import java.util.Random;
+
+public class UC3_OptionCheck {
+    public static void main(String[] args) {
+
+        Random rand = new Random();
+        int option = rand.nextInt(3);
+
+        if (option == 0)
+            System.out.println("No Play");
+        else if (option == 1)
+            System.out.println("Ladder");
+        else
+            System.out.println("Snake");
+    }
+}
