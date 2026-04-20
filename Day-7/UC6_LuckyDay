@@ -1,0 +1,40 @@
+import java.util.Random;
+
+public class UC6_LuckyDay {
+    public static void main(String[] args) {
+
+        int maxWin = Integer.MIN_VALUE;
+        int maxLoss = Integer.MAX_VALUE;
+
+        int luckyDay = 0, unluckyDay = 0;
+
+        Random rand = new Random();
+
+        for (int day = 1; day <= 20; day++) {
+
+            int stake = 100;
+
+            while (stake > 50 && stake < 150) {
+                if (rand.nextInt(2) == 1)
+                    stake++;
+                else
+                    stake--;
+            }
+
+            int profit = stake - 100;
+
+            if (profit > maxWin) {
+                maxWin = profit;
+                luckyDay = day;
+            }
+
+            if (profit < maxLoss) {
+                maxLoss = profit;
+                unluckyDay = day;
+            }
+        }
+
+        System.out.println("Luckiest Day: " + luckyDay);
+        System.out.println("Unluckiest Day: " + unluckyDay);
+    }
+}
