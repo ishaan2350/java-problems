@@ -1,0 +1,19 @@
+public class UC4_Switch {
+    public static void main(String[] args) {
+
+        int wage = 20;
+        int full = 8, part = 4;
+
+        int check = (int)(Math.random() * 3);
+
+        int hours;
+
+        switch (check) {
+            case 1: hours = full; break;
+            case 2: hours = part; break;
+            default: hours = 0;
+        }
+
+        System.out.println("Salary: " + (hours * wage));
+    }
+}
