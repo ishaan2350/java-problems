@@ -1,0 +1,28 @@
+import java.util.Random;
+
+public class UC7_ContinueOrStop {
+    public static void main(String[] args) {
+
+        int total = 0;
+        Random rand = new Random();
+
+        for (int day = 1; day <= 20; day++) {
+
+            int stake = 100;
+
+            while (stake > 50 && stake < 150) {
+                if (rand.nextInt(2) == 1)
+                    stake++;
+                else
+                    stake--;
+            }
+
+            total += (stake - 100);
+        }
+
+        if (total > 0)
+            System.out.println("Continue Gambling");
+        else
+            System.out.println("Stop Gambling");
+    }
+}
