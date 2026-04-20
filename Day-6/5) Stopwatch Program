@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Stopwatch {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Press Enter to START");
+        sc.nextLine();
+        long start = System.currentTimeMillis();
+
+        System.out.println("Press Enter to STOP");
+        sc.nextLine();
+        long end = System.currentTimeMillis();
+
+        double time = (end - start) / 1000.0;
+
+        System.out.println("Elapsed Time: " + time + " seconds");
+    }
+}
