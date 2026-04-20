@@ -1,0 +1,26 @@
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Scanner;
+
+public class CouponNumbers {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        HashSet<Integer> set = new HashSet<>();
+        Random rand = new Random();
+
+        int count = 0;
+
+        while (set.size() < n) {
+            int num = rand.nextInt(n);
+            count++;
+
+            set.add(num);
+        }
+
+        System.out.println("Total random numbers needed: " + count);
+        System.out.println("Coupons: " + set);
+    }
+}
