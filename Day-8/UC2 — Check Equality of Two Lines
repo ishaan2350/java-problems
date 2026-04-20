@@ -1,0 +1,12 @@
+public class UC2_LineEquality {
+    public static void main(String[] args) {
+
+        double len1 = Math.sqrt(Math.pow(3 - 0, 2) + Math.pow(4 - 0, 2));
+        double len2 = Math.sqrt(Math.pow(6 - 0, 2) + Math.pow(8 - 0, 2));
+
+        if (Double.valueOf(len1).equals(len2))
+            System.out.println("Lines are equal");
+        else
+            System.out.println("Lines are not equal");
+    }
+}
