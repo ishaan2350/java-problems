@@ -1,0 +1,8 @@
+public class UC1_StartStake {
+    public static void main(String[] args) {
+        int stake = 100;
+        int bet = 1;
+
+        System.out.println("Initial Stake: " + stake);
+    }
+}
