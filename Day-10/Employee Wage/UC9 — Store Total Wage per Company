@@ -1,0 +1,17 @@
+class Company {
+    String name;
+    int totalWage;
+
+    Company(String name, int totalWage) {
+        this.name = name;
+        this.totalWage = totalWage;
+    }
+}
+
+public class UC9_StoreWage {
+    public static void main(String[] args) {
+
+        Company c = new Company("TCS", 2000);
+        System.out.println(c.name + " Wage: " + c.totalWage);
+    }
+}
