@@ -1,0 +1,16 @@
+class ContactUC1 {
+    String name, city;
+
+    ContactUC1(String name, String city) {
+        this.name = name;
+        this.city = city;
+    }
+}
+
+public class UC1_CreateContact {
+    public static void main(String[] args) {
+
+        ContactUC1 c = new ContactUC1("Ishaan", "Chennai");
+        System.out.println(c.name + " " + c.city);
+    }
+}
