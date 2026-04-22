@@ -1,0 +1,17 @@
+public class UC5_Monthly {
+    public static void main(String[] args) {
+
+        int wage = 20, full = 8, part = 4;
+        int total = 0;
+
+        for (int day = 1; day <= 20; day++) {
+
+            int check = (int)(Math.random() * 3);
+            int hours = (check == 1) ? full : (check == 2) ? part : 0;
+
+            total += hours * wage;
+        }
+
+        System.out.println("Monthly Salary: " + total);
+    }
+}
