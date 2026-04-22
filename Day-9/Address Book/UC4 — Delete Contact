@@ -1,0 +1,26 @@
+import java.util.*;
+
+class ContactDelete {
+    String name;
+
+    ContactDelete(String name) {
+        this.name = name;
+    }
+}
+
+public class UC4_DeleteContact {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ArrayList<ContactDelete> list = new ArrayList<>();
+
+        list.add(new ContactDelete("Ishaan"));
+
+        System.out.print("Enter name to delete: ");
+        String name = sc.next();
+
+        list.removeIf(c -> c.name.equals(name));
+
+        System.out.println("Remaining Contacts: " + list.size());
+    }
+}
