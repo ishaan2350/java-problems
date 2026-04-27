@@ -1,0 +1,19 @@
+class Queue<T> {
+    LinkedList<T> list = new LinkedList<>();
+
+    public void enqueue(T data) {
+        list.addLast(data);
+    }
+
+    public void print() {
+        System.out.println(list);
+    }
+
+    public static void main(String[] args) {
+        Queue<Integer> q = new Queue<>();
+        q.enqueue(56);
+        q.enqueue(30);
+        q.enqueue(70);
+        q.print(); // [56, 30, 70]
+    }
+}
