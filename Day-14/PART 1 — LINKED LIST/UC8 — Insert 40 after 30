@@ -1,0 +1,12 @@
+public void insertAfterValue(int key, int data) {
+    Node temp = head;
+
+    while (temp != null && temp.data != key)
+        temp = temp.next;
+
+    if (temp != null) {
+        Node newNode = new Node(data);
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+}
