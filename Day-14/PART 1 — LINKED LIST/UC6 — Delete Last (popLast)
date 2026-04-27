@@ -1,0 +1,12 @@
+public void popLast() {
+    if (head == null || head.next == null) {
+        head = null;
+        return;
+    }
+
+    Node temp = head;
+    while (temp.next.next != null)
+        temp = temp.next;
+
+    temp.next = null;
+}
