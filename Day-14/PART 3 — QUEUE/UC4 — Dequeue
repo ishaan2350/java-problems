@@ -1,0 +1,3 @@
+public T dequeue() {
+    return list.removeFirst();
+}
