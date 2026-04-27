@@ -1,0 +1,11 @@
+public T peek() {
+    return list.peekFirst();
+}
+
+public T pop() {
+    return list.removeFirst();
+}
+
+public boolean isEmpty() {
+    return list.isEmpty();
+}
