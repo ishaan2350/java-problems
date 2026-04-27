@@ -1,0 +1,42 @@
+class Node {
+    String card;
+    Node next;
+
+    Node(String card) {
+        this.card = card;
+    }
+}
+
+class Queue {
+    Node front, rear;
+
+    void enqueue(String card) {
+        Node n = new Node(card);
+        if (rear == null) {
+            front = rear = n;
+        } else {
+            rear.next = n;
+            rear = n;
+        }
+    }
+
+    void display() {
+        Node temp = front;
+        while (temp != null) {
+            System.out.println(temp.card);
+            temp = temp.next;
+        }
+    }
+}
+
+public class DeckQueue {
+    public static void main(String[] args) {
+
+        Queue q = new Queue();
+
+        q.enqueue("Ace of Spades");
+        q.enqueue("King of Hearts");
+
+        q.display();
+    }
+}
