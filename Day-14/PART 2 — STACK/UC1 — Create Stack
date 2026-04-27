@@ -1,0 +1,21 @@
+import java.util.LinkedList;
+
+class Stack<T> {
+    LinkedList<T> list = new LinkedList<>();
+
+    public void push(T data) {
+        list.addFirst(data);
+    }
+
+    public void print() {
+        System.out.println(list);
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(70);
+        stack.push(30);
+        stack.push(56);
+        stack.print(); // [56, 30, 70]
+    }
+}
