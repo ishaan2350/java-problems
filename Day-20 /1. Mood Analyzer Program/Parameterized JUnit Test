@@ -1,0 +1,25 @@
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class MoodAnalyzerParameterizedTest {
+
+    @ParameterizedTest
+    @CsvSource({
+            "'I am in Sad Mood', SAD",
+            "'I am in Happy Mood', HAPPY",
+            "'Sad Day', SAD",
+            "'Great Day', HAPPY"
+    })
+
+    public void testMood(String message, String expected) {
+
+        MoodAnalyzer moodAnalyzer =
+                new MoodAnalyzer(message);
+
+        String result = moodAnalyzer.analyseMood();
+
+        assertEquals(expected, result);
+    }
+}
